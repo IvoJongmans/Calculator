@@ -20,7 +20,11 @@
 <label for="plus">+</label>
 <input type="radio" name="plusmin" value="+" id="plus" checked>
 <label for="min">-</label>
-<input type="radio" name="plusmin" value="-" id="min"><br/>
+<input type="radio" name="plusmin" value="-" id="min">
+<label for="min">*</label>
+<input type="radio" name="plusmin" value="*" id="times">
+<label for="min">/</label>
+<input type="radio" name="plusmin" value="/" id="dividedby"><br/>
 <input type="text" value="" id="value2"><br/>
 <button type="button" id="knop">=</button>
 <p id="uitslag"></p>
@@ -59,18 +63,37 @@
   </div>
 </div> -->
 <script>  
+      (function($) {
+        $.fn.inputFilter = function(inputFilter) {
+        return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+      if (inputFilter(this.value)) {
+        this.oldValue = this.value;
+        this.oldSelectionStart = this.selectionStart;
+        this.oldSelectionEnd = this.selectionEnd;
+      } else if (this.hasOwnProperty("oldValue")) {
+        this.value = this.oldValue;
+        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+      }
+       });
+      };
+      }(jQuery));
+
+      $("#value1").inputFilter(function(value) {
+      return /^-?\d*[.,]?\d*$/.test(value); });
+      $("#value2").inputFilter(function(value) {
+      return /^-?\d*[.,]?\d*$/.test(value); });
       
       
       
       
       $("#value1:text").keyup(function() {
-        value1 = parseInt(document.getElementById("value1").value);
+        value1 = parseFloat(document.getElementById("value1").value);
         console.log(value1)
         document.getElementById("uitslag").innerHTML = "";
       });
       
       $("#value2:text").keyup(function() {
-        value2 = parseInt(document.getElementById("value2").value);
+        value2 = parseFloat(document.getElementById("value2").value);
         console.log(value2); 
         document.getElementById("uitslag").innerHTML = "";              
       });     
@@ -89,7 +112,22 @@
         $("#value1:text").val("");
         value1 = 0;
         value2= 0; 
-        }        
+        }  
+        else if (document.getElementById("times").checked) {
+        document.getElementById("uitslag").innerHTML = value1 * value2;
+        $("#value2:text").val("");
+        $("#value1:text").val("");
+        value1 = 0;
+        value2= 0; 
+        }  
+        else if (document.getElementById("dividedby").checked) {
+        document.getElementById("uitslag").innerHTML = value1 / value2;
+        $("#value2:text").val("");
+        $("#value1:text").val("");
+        value1 = 0;
+        value2= 0; 
+        }  
+              
       });
 
 
