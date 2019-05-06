@@ -9,11 +9,36 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script>
+    $(document).ready(function(){
+      var input1 = 0;
+      var input2 = 0;
+      $("#value1:text").keyup(function() {
+        input1 = document.getElementById("value1").value;
+        console.log(input1);
+      });
+      $("#value2:text").keyup(function() {
+        input2 = document.getElementById("value2").value;
+        console.log(input2);
+      });
+      
+    });
+  </script>
 </head>
 
 <body>
+
+<input type="text" value="" id="value1"><br/>
+<label for="plus">+</label>
+<input type="radio" name="plusmin" value="+" id="plus">
+<label for="min">-</label>
+<input type="radio" name="plusmin" value="-" id="min"><br/>
+<input type="text" value="" id="value2"><br/>
+<button type="button">=</button>
+<p>77</p>
+
   
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-xs-12" id="header">
       <h1 class="text-center">Calculator</h1>
@@ -25,26 +50,26 @@
     </div>  
   </div>
   <div class="row">
-    <div class="col-xs-4 button"></div>
-    <div class="col-xs-4"></div>
-    <div class="col-xs-4"></div>
+    <div class="col-xs-4 button" id="7">7</div>
+    <div class="col-xs-4 button" dir="8">8</div>
+    <div class="col-xs-4 button">9</div>
   </div>
   <div class="row">
-    <div class="col-xs-4"></div>
-    <div class="col-xs-4"></div>
-    <div class="col-xs-4"></div>
+    <div class="col-xs-4 button">4</div>
+    <div class="col-xs-4 button">5</div>
+    <div class="col-xs-4 button">6</div>
   </div>
   <div class="row">
-    <div class="col-xs-4"></div>
-    <div class="col-xs-4"></div>
-    <div class="col-xs-4"></div>
+    <div class="col-xs-4 button">1</div>
+    <div class="col-xs-4 button">2</div>
+    <div class="col-xs-4 button">3</div>
   </div>
   <div class="row">
-    <div class="col-xs-4"></div>
-    <div class="col-xs-4"></div>
-    <div class="col-xs-4"></div>
+    <div class="col-xs-4 button" id="+">+</div>
+    <div class="col-xs-4 button">0</div>
+    <div class="col-xs-4 button">-</div>
   </div>
-</div>
+</div> -->
 
 </body>
 </html>

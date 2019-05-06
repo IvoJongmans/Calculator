@@ -5,5 +5,11 @@
 
 .button {
     background-color: black;
+    height: 10vw;
+    min-height: 150px;
+    border: 10px solid white;
+    color: white;
+    text-align: center;
+    font-size: 40px;
 }
 
