@@ -62,9 +62,14 @@
     <div class="col-xs-4 button">0</div>
     <div class="col-xs-4 button plus" id="min" onclick="getmin()">-</div>
   </div>
+  <div class="row">
+    <div class="col-xs-12 button is" id="is" onclick="getis()">=</div>
+  </div>
 </div>
 
 <script>
+  var answer = 0;
+  var switchgetal = 0;
   var getal1 = "";
   var getal1toint = 0;
   var getal2 = "";
@@ -72,59 +77,137 @@
   var scherm = document.getElementById("sum");
   scherm.innerHTML = "";
   function get7() {
+    if (switchgetal == 0) {
     scherm.innerHTML += "7";
     getal1 += "7";
     console.log(getal1);
+    }
+    else if (switchgetal >= 1) {
+    scherm.innerHTML += "7";
+    getal2 += "7";
+    console.log(getal2); 
+    }
   }
   function get8() {
+    if (switchgetal == 0) {
     scherm.innerHTML += "8";
     getal1 += "8";
     console.log(getal1);
+    }
+    else if (switchgetal >= 1) {
+    scherm.innerHTML += "8";
+    getal2 += "8";
+    console.log(getal2); 
+    }
   }
   function get9() {
+    if (switchgetal == 0) {
     scherm.innerHTML += "9";
     getal1 += "9";
     console.log(getal1);
+    }
+    else if (switchgetal >= 1) {
+    scherm.innerHTML += "9";
+    getal2 += "9";
+    console.log(getal2); 
+    }
   }
   function get4() {
+    if (switchgetal == 0) {
     scherm.innerHTML += "4";
     getal1 += "4";
     console.log(getal1);
+    }
+    else if (switchgetal >= 1) {
+    scherm.innerHTML += "4";
+    getal2 += "4";
+    console.log(getal2); 
+    }
   }
   function get5() {
+    if (switchgetal == 0) {
     scherm.innerHTML += "5";
     getal1 += "5";
     console.log(getal1);
+    }
+    else if (switchgetal >= 1) {
+    scherm.innerHTML += "5";
+    getal2 += "5";
+    console.log(getal2); 
+    }
   }
   function get6() {
+    if (switchgetal == 0) {
     scherm.innerHTML += "6";
     getal1 += "6";
     console.log(getal1);
+    }
+    else if (switchgetal >= 1) {
+    scherm.innerHTML += "6";
+    getal2 += "6";
+    console.log(getal2); 
+    }
   }
   function get1() {
+    if (switchgetal == 0) {
     scherm.innerHTML += "1";
     getal1 += "1";
     console.log(getal1);
+    }
+    else if (switchgetal >= 1) {
+    scherm.innerHTML += "1";
+    getal2 += "1";
+    console.log(getal2); 
+    }
   }
   function get2() {
+    if (switchgetal == 0) {
     scherm.innerHTML += "2";
     getal1 += "2";
     console.log(getal1);
+    }
+    else if (switchgetal >= 1) {
+    scherm.innerHTML += "2";
+    getal2 += "2";
+    console.log(getal2); 
+    }
   }
   function get3() {
+    if (switchgetal == 0) {
     scherm.innerHTML += "3";
     getal1 += "3";
     console.log(getal1);
+    }
+    else if (switchgetal >= 1) {
+    scherm.innerHTML += "3";
+    getal2 += "3";
+    console.log(getal2); 
+    }
   }
   function getplus() {
+    if (switchgetal == 0) {
     scherm.innerHTML += " + "
     getal1toint = parseFloat(getal1);
     console.log(getal1toint);
-  }
+    switchgetal += 1;
+    console.log(switchgetal);
+    }
+  }  
   function getmin() {
     scherm.innerHTML += " - "
     getal1toint = parseFloat(getal1);
     console.log(getal1toint);
+    switchgetal += 1;
+    console.log(switchgetal);
+  }
+  function getis() {
+    if (switchgetal >= 1) {
+      getal2toint = parseFloat(getal2);
+      console.log(getal2toint);
+      answer = getal1toint + getal2toint;
+      scherm.innerHTML = "";
+      scherm.innerHTML = answer;
+    }
   }
 
 
