@@ -58,14 +58,17 @@
       <div class="col-xs-4 button knop9" id="3" onclick="get3()">3</div>
   </div>
   <div class="row">
-    <div class="col-xs-4 button" id="+">+</div>
+      <div class="col-xs-4 button plus" id="plus" onclick="getplus()">+</div>
     <div class="col-xs-4 button">0</div>
-    <div class="col-xs-4 button">-</div>
+    <div class="col-xs-4 button plus" id="min" onclick="getmin()">-</div>
   </div>
 </div>
 
 <script>
   var getal1 = "";
+  var getal1toint = 0;
+  var getal2 = "";
+  var getal2toint = 0;
   var scherm = document.getElementById("sum");
   scherm.innerHTML = "";
   function get7() {
@@ -113,6 +116,17 @@
     getal1 += "3";
     console.log(getal1);
   }
+  function getplus() {
+    scherm.innerHTML += " + "
+    getal1toint = parseFloat(getal1);
+    console.log(getal1toint);
+  }
+  function getmin() {
+    scherm.innerHTML += " - "
+    getal1toint = parseFloat(getal1);
+    console.log(getal1toint);
+  }
+
 
 
 </script>
