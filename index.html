@@ -30,39 +30,93 @@
 <p id="uitslag"></p>
 
   
-<!-- <div class="container">
+<div class="container">
   <div class="row">
     <div class="col-xs-12" id="header">
       <h1 class="text-center">Calculator</h1>
     </div>  
   </div>
   <div class="row">
-    <div class="col-xs-12" id="sum">
+    <div class="col-xs-12 scherm" id="sum">
 
     </div>  
   </div>
   <div class="row">
-    <div class="col-xs-4 button" id="7">7</div>
-    <div class="col-xs-4 button" dir="8">8</div>
-    <div class="col-xs-4 button">9</div>
+    <div class="col-xs-4 button knop7" id="7" onclick="get7()">7</div>
+    <div class="col-xs-4 button knop8" id="8" onclick="get8()">8</div>
+    <div class="col-xs-4 button knop9" id="9" onclick="get9()">9</div>
+    
   </div>
   <div class="row">
-    <div class="col-xs-4 button">4</div>
-    <div class="col-xs-4 button">5</div>
-    <div class="col-xs-4 button">6</div>
+      <div class="col-xs-4 button knop7" id="4" onclick="get4()">4</div>
+      <div class="col-xs-4 button knop8" id="5" onclick="get5()">5</div>
+      <div class="col-xs-4 button knop9" id="6" onclick="get6()">6</div>
   </div>
   <div class="row">
-    <div class="col-xs-4 button">1</div>
-    <div class="col-xs-4 button">2</div>
-    <div class="col-xs-4 button">3</div>
+      <div class="col-xs-4 button knop7" id="1" onclick="get1()">1</div>
+      <div class="col-xs-4 button knop8" id="2" onclick="get2()">2</div>
+      <div class="col-xs-4 button knop9" id="3" onclick="get3()">3</div>
   </div>
   <div class="row">
     <div class="col-xs-4 button" id="+">+</div>
     <div class="col-xs-4 button">0</div>
     <div class="col-xs-4 button">-</div>
   </div>
-</div> -->
-<script>  
+</div>
+
+<script>
+  var getal1 = "";
+  var scherm = document.getElementById("sum");
+  scherm.innerHTML = "";
+  function get7() {
+    scherm.innerHTML += "7";
+    getal1 += "7";
+    console.log(getal1);
+  }
+  function get8() {
+    scherm.innerHTML += "8";
+    getal1 += "8";
+    console.log(getal1);
+  }
+  function get9() {
+    scherm.innerHTML += "9";
+    getal1 += "9";
+    console.log(getal1);
+  }
+  function get4() {
+    scherm.innerHTML += "4";
+    getal1 += "4";
+    console.log(getal1);
+  }
+  function get5() {
+    scherm.innerHTML += "5";
+    getal1 += "5";
+    console.log(getal1);
+  }
+  function get6() {
+    scherm.innerHTML += "6";
+    getal1 += "6";
+    console.log(getal1);
+  }
+  function get1() {
+    scherm.innerHTML += "1";
+    getal1 += "1";
+    console.log(getal1);
+  }
+  function get2() {
+    scherm.innerHTML += "2";
+    getal1 += "2";
+    console.log(getal1);
+  }
+  function get3() {
+    scherm.innerHTML += "3";
+    getal1 += "3";
+    console.log(getal1);
+  }
+
+
+</script>
+<!-- <script>  
       (function($) {
         $.fn.inputFilter = function(inputFilter) {
         return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
@@ -131,7 +185,7 @@
       });
 
 
-</script>
+</script> -->
 
 </body>
 </html>
